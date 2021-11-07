@@ -6,16 +6,23 @@
     "@testing-library/jest-dom": "^5.15.0",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.3.11",
+    "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
+    "tailwindcss": "^2.2.19",
     "web-vitals": "^1.1.2"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "eslint . --ext .js --ext .jsx",
+    "check-staged": "lint-staged",
+    "prepare": "cd .. && npx husky install test-ui-react/.husky"
   },
   "eslintConfig": {
     "extends": [
@@ -34,5 +41,26 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "eslint": "7.32.0",
+    "eslint-config-airbnb": "18.2.1",
+    "eslint-config-prettier": "8.3.0",
+    "eslint-plugin-import": "2.24.2",
+    "eslint-plugin-jsx-a11y": "6.4.1",
+    "eslint-plugin-react": "7.26.1",
+    "eslint-plugin-react-hooks": "4.2.0",
+    "husky": "7.0.2",
+    "lint-staged": "11.2.0",
+    "prettier": "2.4.1"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx}": "eslint . --ext .js --ext .jsx",
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": "prettier --write"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }
