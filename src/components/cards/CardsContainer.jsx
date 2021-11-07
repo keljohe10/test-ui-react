@@ -1,5 +1,6 @@
 import React from 'react';
+import Card from './Card';
 
-const CardsContainer = () => <span>👉 Your code goes here test 👈</span>;
+const CardsContainer = () => <Card />;
 
 export default CardsContainer;
