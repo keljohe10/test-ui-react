@@ -22,7 +22,7 @@
     "eject": "react-scripts eject",
     "lint": "eslint . --ext .js --ext .jsx",
     "check-staged": "lint-staged",
-    "prepare": "cd .. && npx husky install test-ui-react/.husky"
+    "prepare": "npx husky install .husky"
   },
   "eslintConfig": {
     "extends": [
