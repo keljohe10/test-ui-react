@@ -1,6 +1,6 @@
 import React from 'react'
-import papa from "../../../assets/img/pope-francis.png";
-import papa2x from "../../../assets/img/pope-francis.@2x.png";
+import pope from "../../../assets/img/pope-francis.png";
+import pope2x from "../../../assets/img/pope-francis.@2x.png";
 import thumbsUp from "../../../assets/img/thumbs-up.svg";
 import thumbsDown from "../../../assets/img/thumbs-down.svg";
 
@@ -8,9 +8,9 @@ const Header = () => (
     <header className="hero">
         <img
             className="hero__background"
-            srcSet={`${papa} 750w, ${papa2x} 1440w`}
+            srcSet={`${pope} 750w, ${pope2x} 1440w`}
             sizes="(min-width: 750px) 1440px, 100vw"
-            src={papa}
+            src={pope}
             alt="Pope Francis"/>
         <div className="max-centered">
             <div className="hero__featured-card">
