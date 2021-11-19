@@ -478,8 +478,6 @@ main h2 {
   min-width: 300px;
   height: 300px;
   margin: 6px 6px;
-  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.6) 100%),
-    url('./assets/img/kanye.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -490,12 +488,12 @@ main h2 {
   width: 100%;
 }
 
-.card-lis-img {
+/* .card-list-img {
   height: 300px;
   background-image: url('./assets/img/greta.png');
   background-position: left;
   background-repeat: no-repeat;
-}
+} */
 .container-card-list {
   position: relative;
   margin-top: 5px;
@@ -526,8 +524,12 @@ main h2 {
 }
 
 .card-like {
+  box-sizing: border-box;
   width: 30px;
   height: 30px;
+}
+
+.card-like__margin {
   margin: 4px;
 }
 
@@ -540,14 +542,12 @@ main h2 {
 }
 
 .card-like__img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-  padding-top: 8px;
+  padding-top: 4px;
 }
 
 .container-card__title h3 {
+  position: absolute;
+  left: 45px;
   color: #ffffff;
   margin: 0;
   font-family: Lato;
@@ -569,6 +569,8 @@ main h2 {
 }
 
 .container-card span {
+  position: absolute;
+  right: 42px;
   width: 279px;
   height: 17px;
   font-family: Lato;
@@ -584,6 +586,9 @@ main h2 {
   display: flex;
   justify-content: center;
   margin-top: 10px;
+  position: absolute;
+  right: 45px;
+  bottom: 37px;
 }
 
 .card-button {
@@ -594,11 +599,13 @@ main h2 {
   border: 1px solid #ffffff;
   box-sizing: border-box;
   margin-left: 10px;
+  cursor: pointer;
 }
 
 .card-container-rate {
   display: flex;
-  margin-top: 15px;
+  position: absolute;
+  bottom: 0;
   height: 30px;
   width: 100%;
   align-items: center;
@@ -634,6 +641,19 @@ main h2 {
   margin-left: 4px;
 }
 
+.card-list-likebutton {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.selected-button {
+  border: 1px solid white;
+}
+
+.unselected-button {
+  border: none;
+}
 @media all and (min-width: 500px) {
   .banner-top .banner__left {
     flex-basis: 30%;
